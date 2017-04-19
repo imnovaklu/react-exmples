@@ -1,16 +1,17 @@
 {
-  "name": "React-Webpack-Cli",
+  "name": "React-Examples",
   "version": "0.0.1",
-  "description": "React Webpack Babel Starter Kit",
+  "description": "React Examples",
   "repository": {
     "type": "git",
-    "url": "https://github.com/english10010/React-Webpack-cli"
+    "url": "https://github.com/imnovaklu/react-exmples"
   },
   "keywords": [
     "React",
+    "Redux",
     "Webpack"
   ],
-  "author": "english10010",
+  "author": "imnovaklu",
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "babel-core": "^6.17.0",

@@ -1,0 +1,23 @@
+{
+  "name": "React-Examples",
+  "description": "React Examples",
+  "main": "",
+  "authors": [
+    "imnovaklu"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "React",
+    "Redux",
+    "Webpack"
+  ],
+  "homepage": "https://github.com/imnovaklu/react-exmples",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
