@@ -50,23 +50,33 @@ class InvoiceTable extends Component{
                 </tr>
                 </thead>
                 <tbody>
-                {v_data.map((elem, index)=>(
-                    <tr key={index}>
-                        <td>{index+1+"."}</td>
-                        <td><input type="text" className="form-control"/></td>
-                        <td>
-                            <div className="input-group">
-                                <span className="input-group-addon">$</span>
-                                <input type="text" className="form-control" name="price" data-index={index} defaultValue={elem.price==0?"":elem.price} onChange={this.onDataUpdate}/>
-                            </div>
-                        </td>
-                        <td>
-                            <input type="text" className="form-control" name="amount" data-index={index} defaultValue={elem.amount==0?"":elem.amount} onChange={this.onDataUpdate}/>
-                        </td>
-                        <td style={tdStyle}>{"$"+elem.price*elem.amount}</td>
-                        <td><button data-index={index} className="btn btn-danger" onClick={this.onDeleteItem}>×</button></td>
-                    </tr>
-                ))}
+                {data.map((elem, index)=>{
+                    if(elem.visible){
+                        return (
+                            <tr key={index}>
+                                <td>{index + 1 + "."}</td>
+                                <td><input type="text" className="form-control"/></td>
+                                <td>
+                                    <div className="input-group">
+                                        <span className="input-group-addon">$</span>
+                                        <input type="text" className="form-control" name="price" data-index={index}
+                                               defaultValue={elem.price == 0 ? "" : elem.price}
+                                               onChange={this.onDataUpdate}/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" className="form-control" name="amount" data-index={index}
+                                           defaultValue={elem.amount == 0 ? "" : elem.amount} onChange={this.onDataUpdate}/>
+                                </td>
+                                <td style={tdStyle}>{"$" + elem.price * elem.amount}</td>
+                                <td>
+                                    <button data-index={index} className="btn btn-danger" onClick={this.onDeleteItem}>×
+                                    </button>
+                                </td>
+                            </tr>
+                        )
+                    }
+                })}
                 <tr>
                     <td colSpan="4"></td>
                     <td style={tdStyle}>{"$" + total}</td>
