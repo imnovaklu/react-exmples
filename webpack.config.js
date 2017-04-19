@@ -3,9 +3,18 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    context: path.join(__dirname, "src"),
+    context: path.join(__dirname, "examples"),
     devtool: debug ? "inline-sourcemap" : null,
-    entry: "./js/app.js",
+    entry: {
+        /*filtering: './filtering-list/js/app.js',
+        password: './password-check/js/app.js',
+        prefixer: './phone-prefixer/js/app.js',
+        preventive: './preventive-button/js/app.js',
+        placeholder: './fancy-placeholder/js/app.js',
+        reddit:'./reddit-articles/js/app.js',
+        two:'./two-lists/js/app.js',*/
+        invoice:'./invoice/js/app.js'
+    },
     module: {
         loaders: [
             {
@@ -44,8 +53,8 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + "/src/",
-        filename: "app.bundle.js"
+        path: __dirname + "/examples/dist/",
+        filename: "[name].bundle.js"
     },
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),

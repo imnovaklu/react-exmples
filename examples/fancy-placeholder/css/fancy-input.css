@@ -1,0 +1,38 @@
+#input-container {
+    position: relative;
+    margin: 20px;
+}
+
+.form-control {
+    width: 200px;
+    height: 38px;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid;
+}
+
+.form-control::-webkit-input-placeholder{
+    color: #797979;
+    font-size: 20px;
+}
+
+.fancy-span-active{
+    top: 4px;
+    color: darkblue;
+    line-height: 6px;
+    font-size: 6px;
+}
+
+#input-container span {
+    position: absolute;
+    transition: .3s ease-in-out;
+    left: 8px;
+    pointer-events: none;
+}
+
+.fancy-span-original {
+    top: 8px;
+    color: #868686;
+    line-height: 20px;
+    font-size: 20px;
+}
